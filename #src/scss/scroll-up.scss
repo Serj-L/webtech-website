@@ -1,0 +1,44 @@
+.scroll-up-btn {
+  display: none;
+
+  @media (min-width: 769px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(232, 193, 0, 0.8);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color 0.2s, opacity 0.5s, visibility 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    cursor: pointer;
+
+    &::after {
+      content: "\f077";
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      color: #ffffff;
+    }
+
+    @media (min-width: 993px) {
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: rgba(232, 193, 0, 1);
+      }
+    }
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
