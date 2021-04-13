@@ -1,6 +1,7 @@
 const burgerMenu = document.querySelector(".header__burger-btn");
-const menuWrapper = document.querySelector(".header__nav-wrapper");
+const menuWrapper = document.querySelector(".header__nav");
 const wrapper = document.querySelector(".header__logo-nav-wrapper");
+const socialWrapper = document.querySelector(".header__socials")
 const killBurger = () => {
     showScroll();
     burgerMenu.classList.remove("active");
@@ -31,12 +32,14 @@ const hideScroll = () => {
     document.body.style.paddingRight = scrollWidht;
     document.body.style.overflow = "hidden";
     wrapper.style.paddingRight = scrollWidht;
+    socialWrapper.style.paddingRight = scrollWidht;
 };
 
 const showScroll = () => {
     document.body.style.paddingRight = "";
     document.body.style.overflow = "visible";
     wrapper.style.paddingRight = "";
+    socialWrapper.style.paddingRight = "";
 };
 
 // burger menu
@@ -60,7 +63,7 @@ if (burgerMenu) {
         }
     });
 
-    const menuLinks = document.querySelectorAll(".nav-link");
+    const menuLinks = document.querySelectorAll(".header__nav-link");
     if (menuLinks.length > 0) {
         menuLinks.forEach(menuLink => {
             menuLink.addEventListener("click", function (e) {

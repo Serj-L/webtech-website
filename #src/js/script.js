@@ -1,3 +1,7 @@
+'use strict';
+
+@@include('burger.js')
+
 //check broswer webP support
   function testWebP(callback) {
     var webP = new Image();
