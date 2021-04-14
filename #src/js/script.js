@@ -1,8 +1,8 @@
 'use strict';
 
-@@include('burger.js')
 @@include('sticky-nav.js')
 @@include('smooth-scroll-to-block.js')
+@@include('burger.js')
 
 //check broswer webP support
   function testWebP(callback) {

@@ -1,17 +1,17 @@
 // scroll up
-scrbtn = document.querySelector('.scroll-up-btn');
+const scrBtn = document.querySelector('.scroll-up-btn');
 
 window.onscroll = function() {scrollUpFunction()};
 
 function scrollUpFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    scrbtn.classList.add('active');
+    scrBtn.classList.add('active');
   } else {
-    scrbtn.classList.remove('active');
+    scrBtn.classList.remove('active');
   }
 }
 
-scrbtn.addEventListener('click', function (e) {
+scrBtn.addEventListener('click', function (e) {
   e.preventDefault();
   window.scrollTo({
     top: 0,

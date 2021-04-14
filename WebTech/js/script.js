@@ -1,5 +1,44 @@
 'use strict';
 
+//sticky navigation
+ const navBar = document.querySelector('.header__logo-nav');
+ const navBarHeight = navBar.offsetHeight;
+ const socialNavBar = document.querySelector('.header__socials');
+ const socialNavBarHeight = socialNavBar.offsetHeight;
+
+ window.onscroll = () => {checkScroll()};
+
+ function checkScroll() {
+   if (document.body.scrollTop > socialNavBarHeight || document.documentElement.scrollTop > socialNavBarHeight) {
+     navBar.classList.add('sticky');
+     socialNavBar.style.marginBottom = `${navBarHeight}px`;
+   } else {
+     navBar.classList.remove('sticky');
+     socialNavBar.style.marginBottom = '';
+   }
+ }
+//sticky navigation
+// menu scroll to function
+const menuLinks = document.querySelectorAll('.header__nav-link[data-goto], .header__hero-btn[data-goto]');
+if (menuLinks.length > 0) {
+    menuLinks.forEach(menuLink => {
+        menuLink.addEventListener('click', function(e) {
+            const menuLink = e.target;
+            if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+                const gotoBlock = document.querySelector(menuLink.dataset.goto);
+                const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header__logo-nav').offsetHeight;
+
+                window.scrollTo({
+                    top: gotoBlockValue,
+                    behavior: 'smooth'
+                });
+
+                e.preventDefault();
+            }
+        });
+    });
+}
+// menu scroll to function
 const burgerMenu = document.querySelector('.header__burger-btn');
 const menuWrapper = document.querySelector('.header__nav');
 const wrapper = document.querySelector('.header__logo-nav-wrapper');
@@ -81,45 +120,6 @@ if (burgerMenu) {
     }
 }
 // /burger menu
-//sticky navigation
- const navBar = document.querySelector('.header__logo-nav');
- const navBarHeight = navBar.offsetHeight;
- const socialNavBar = document.querySelector('.header__socials');
- const socialNavBarHeight = socialNavBar.offsetHeight;
-
- window.onscroll = () => {checkScroll()};
-
- function checkScroll() {
-   if (document.body.scrollTop > socialNavBarHeight || document.documentElement.scrollTop > socialNavBarHeight) {
-     navBar.classList.add('sticky');
-     socialNavBar.style.marginBottom = `${navBarHeight}px`;
-   } else {
-     navBar.classList.remove('sticky');
-     socialNavBar.style.marginBottom = '';
-   }
- }
-//sticky navigation
-// menu scroll to function
-const menuLinks = document.querySelectorAll('.header__nav-link[data-goto], .header__hero-btn[data-goto]');
-if (menuLinks.length > 0) {
-    menuLinks.forEach(menuLink => {
-        menuLink.addEventListener('click', function(e) {
-            const menuLink = e.target;
-            if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-                const gotoBlock = document.querySelector(menuLink.dataset.goto);
-                const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header__logo-nav').offsetHeight;
-
-                window.scrollTo({
-                    top: gotoBlockValue,
-                    behavior: 'smooth'
-                });
-
-                e.preventDefault();
-            }
-        });
-    });
-}
-// menu scroll to function
 
 //check broswer webP support
   function testWebP(callback) {

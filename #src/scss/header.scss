@@ -1,20 +1,5 @@
 .header {
     height: 100%;
-    position: relative;
-
-    &::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 70px;
-        border: 70px solid transparent;
-        border-bottom: 0px solid transparent;
-        border-left: 0px solid transparent;
-        border-right: 1440px solid #ffffff;
-        z-index: 1;
-    }
 
     // .header__fullscreen-body
     &__fullscreen-body {
@@ -353,7 +338,20 @@
     // .header__hero
     &__hero {
         color: #ffffff;
-        position: relative;
+        min-height: 100%;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 70px;
+            border: 70px solid transparent;
+            border-bottom: 0px solid transparent;
+            border-left: 0px solid transparent;
+            border-right: 1440px solid #ffffff;
+        }
     }
 
     // .header__hero-content-wrapper
@@ -372,7 +370,7 @@
 
     // .header__hero-title-number
     &__hero-title-number {
-        font-size: calc(40px + 100 * ((100vw - 320px) / (1440 - 320)));
+        font-size: 140px /* calc(40px + 100 * ((100vw - 320px) / (1440 - 320))) */;
         line-height: 100%;
         color: rgba(255, 255, 255, 0.13);
         padding-right: 25px;
