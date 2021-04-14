@@ -1,6 +1,8 @@
 'use strict';
 
 @@include('burger.js')
+@@include('sticky-nav.js')
+@@include('smooth-scroll-to-block.js')
 
 //check broswer webP support
   function testWebP(callback) {
@@ -17,4 +19,4 @@
         document.querySelector('body').classList.add('no-webp');
     }
  });
- //check broswer webP support
+//check broswer webP support

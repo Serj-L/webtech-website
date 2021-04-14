@@ -16,6 +16,8 @@ $transition: 0.2s;
 @import "fonts";
 @import "normalize";
 @import "header";
+@import "how-we-works";
+@import "features";
 
 *,
 *::before,
@@ -30,6 +32,8 @@ $transition: 0.2s;
 body {
   max-width: 1440px;
   font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   background-color: #e5e5e5;
   margin: 0 auto;
 }
@@ -39,12 +43,42 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 
+  &.navigation-container {
+    @media (max-width: 992px) {
+      padding: 0;
+    }
+  }
+
   @media (max-width: 1280px) {
     max-width: 1070px;
   }
   @media (max-width: 1140px) {
     max-width: 992px;
   }
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: calc(30px + 20 * ((100vw - 320px) / (1440 - 320)));
+  line-height: 150%;
+  font-weight: 400;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 38px;
+  line-height: 150%;
+  font-weight: 600;
+  margin: 0;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 400;
+  margin: 0;
 }
 
 .color-text {
