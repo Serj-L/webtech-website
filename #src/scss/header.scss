@@ -1,6 +1,10 @@
 .header {
     height: 100%;
 
+    @media (max-width: 1140px) {
+        height: unset;
+    }
+
     // .header__fullscreen-body
     &__fullscreen-body {
         min-height: 100vh;
@@ -18,6 +22,10 @@
             height: 100%;
             background-color: rgba(18, 27, 38, 0.73);
             z-index: -1;
+        }
+
+        @media (max-width: 1140px) {
+            min-height: unset;
         }
     }
 
@@ -340,17 +348,15 @@
         color: #ffffff;
         min-height: 100%;
 
-        &::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 70px;
-            border: 70px solid transparent;
-            border-bottom: 0px solid transparent;
-            border-left: 0px solid transparent;
-            border-right: 1440px solid #ffffff;
+        @media (max-width: 1140px) {
+            min-height: unset;
+            padding: 160px 0;
+        }
+        @media (max-width: 992px) {
+            padding: 100px 0;
+        }
+        @media (max-width: 576px) {
+            padding: 50px 0 70px;
         }
     }
 
@@ -360,6 +366,13 @@
         flex-direction: column;
         justify-content: center;
         min-height: 86vh;
+
+        @media (max-width: 1140px) {
+            min-height: unset;
+        }
+        @media (max-width: 992px) {
+            align-items: center;
+        }
     }
 
     //.header__hero-title-wrapper
@@ -370,16 +383,28 @@
 
     // .header__hero-title-number
     &__hero-title-number {
-        font-size: 140px /* calc(40px + 100 * ((100vw - 320px) / (1440 - 320))) */;
+        font-size: calc(70px + 70 * ((100vw - 320px) / (1440 - 320)));
         line-height: 100%;
         color: rgba(255, 255, 255, 0.13);
         padding-right: 25px;
         border-right: 3px solid $primary-color;
+
+        @media (min-width: 1441px) {
+            font-size: 140px;
+        }
+
+        @media (max-width: 576px) {
+            padding-right: 15px;
+        }
     }
 
     // .header__hero-title
     &__hero-title {
         margin-left: 25px;
+
+        @media (max-width: 576px) {
+            margin-left: 15px;
+        }
     }
 
     // .header__hero-text
@@ -388,6 +413,10 @@
         max-width: 600px;
         line-height: 150%;
         margin-top: 25px;
+
+        @media (max-width: 992px) {
+            text-align: center;
+        }
     }
 
     // .header__hero-btn-wrapper
@@ -399,6 +428,10 @@
 
         &:first-child {
             margin-right: 15px;
+        }
+
+        @media (max-width: 992px) {
+            justify-content: center;
         }
     }
 
@@ -422,15 +455,6 @@
             margin-right: 15px;
         }
 
-        @media (min-width: 993px) {
-            &:hover,
-            &:focus {
-                &::after {
-                    transform: scale(1);
-                }
-            }
-        }
-
         &::after {
             content: "";
             position: absolute;
@@ -444,17 +468,52 @@
             transform: scale(0);
             transition: $transition ease-in;
         }
+
+        @media (min-width: 993px) {
+            &:hover,
+            &:focus {
+                &::after {
+                    transform: scale(1);
+                }
+            }
+        }
     }
 
     // .header__hero-image-wrapper
     &__hero-image-wrapper {
-        position: absolute;
-        right: 0;
-        bottom: 0;
+        display: none;
+        @media (min-width: 993px) {
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
     }
 
     // .header__hero-image
     &__hero-image {
-        align-self: flex-end;
+        width: 100%;
+        display: block;
+        margin-left: auto;
+
+        @media (max-width: 1280px) {
+            width: 90%;
+        }
+        @media (max-width: 1140px) {
+            width: 75%;
+        }
+    }
+
+    // .header__hero-triangle-wrapper
+    &__hero-triangle-wrapper {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    // .header__hero-triangle-image
+    &__hero-triangle-image {
+        width: 100%;
+        display: block;
     }
 }

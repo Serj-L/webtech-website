@@ -1,20 +1,21 @@
 // scroll up
-const scrBtn = document.querySelector('.scroll-up-btn');
+const scrBtn = document.querySelector(".scroll-up-btn");
 
-window.onscroll = function() {scrollUpFunction()};
+/* window.onscroll = function() {scrollUp()}; */
 
-function scrollUpFunction() {
+function scrollUp() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    scrBtn.classList.add('active');
+    scrBtn.classList.add("active");
   } else {
-    scrBtn.classList.remove('active');
+    scrBtn.classList.remove("active");
   }
 }
 
-scrBtn.addEventListener('click', function (e) {
+scrBtn.addEventListener("click", function (e) {
   e.preventDefault();
   window.scrollTo({
     top: 0,
-    behavior: "smooth"});
+    behavior: "smooth",
+  });
 });
 // scroll up

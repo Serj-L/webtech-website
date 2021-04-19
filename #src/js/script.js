@@ -1,22 +1,29 @@
-'use strict';
+"use strict";
 
-@@include('sticky-nav.js')
-@@include('smooth-scroll-to-block.js')
-@@include('burger.js')
+@@include("sticky-nav.js");
+@@include("scroll-up.js");
+@@include("smooth-scroll-to-block.js");
+@@include("burger.js");
 
 //check broswer webP support
-  function testWebP(callback) {
-    var webP = new Image();
-    webP.onload = webP.onerror = function () {
-      callback(webP.height == 2);
-    };
-    webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+function testWebP(callback) {
+  var webP = new Image();
+  webP.onload = webP.onerror = function () {
+    callback(webP.height == 2);
+  };
+  webP.src =
+    "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+}
+testWebP(function (support) {
+  if (support == true) {
+    document.querySelector("body").classList.add("webp");
+  } else {
+    document.querySelector("body").classList.add("no-webp");
   }
-  testWebP(function (support) {
-    if (support == true) {
-        document.querySelector('body').classList.add('webp');
-    } else{
-        document.querySelector('body').classList.add('no-webp');
-    }
- });
+});
 //check broswer webP support
+
+window.onscroll = function () {
+  scrollUp();
+  stickyNav();
+};
