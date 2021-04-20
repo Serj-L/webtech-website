@@ -88,11 +88,6 @@
 
     // .header__socials-nav-link
     &__socials-nav-link {
-        font-size: 15px;
-        color: #ffffff;
-        padding: 5px;
-        transition: $transition;
-
         @media (min-width: 993px) {
             &:hover,
             &:focus {

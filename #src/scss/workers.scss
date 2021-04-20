@@ -1,0 +1,194 @@
+.workers {
+    background-color: #ffffff;
+    padding: 110px 0 150px;
+
+    @media (max-width: 1140px) {
+        padding: 60px 0 100px;
+    }
+    @media (max-width: 576px) {
+        padding: 50px 0 50px;
+    }
+    // .workers__wrapper
+    &__wrapper {
+        display: flex;
+
+        @media (max-width: 1180px) {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 630px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    // .workers__content
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 300px;
+
+        @media (max-width: 630px) {
+            align-items: center;
+            max-width: unset;
+        }
+    }
+
+    // .workers__title
+    &__title {
+    }
+
+    // .workers__btn
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: #141d28;
+        width: 164px;
+        padding: 17px 0;
+        margin-top: 70px;
+        background-color: transparent;
+        border: 2px solid $primary-color;
+        transition: $transition;
+        position: relative;
+        z-index: 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: calc(100% + 2px);
+            height: calc(100% + 2px);
+            left: -1px;
+            top: -1px;
+            background-color: $primary-color;
+            transform: scale(0);
+            z-index: -1;
+            transition: $transition ease-in;
+        }
+
+        @media (min-width: 993px) {
+            &:hover,
+            &:focus {
+                color: #ffffff;
+                &::after {
+                    transform: scale(1);
+                }
+            }
+        }
+        @media (max-width: 630px) {
+            margin-top: 35px;
+        }
+    }
+
+    // .workers__card
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+
+        &:not(:first-child) {
+            margin-left: 5px;
+        }
+    }
+
+    // .workers__img-wrapper
+    &__img-wrapper {
+        position: relative;
+    }
+
+    // .workers__img-link
+    &__img-link {
+        &:hover + .workers__socials-nav,
+        &:focus + .workers__socials-nav {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+
+    // .workers__img
+    &__img {
+        display: block;
+    }
+
+    // .workers__socials-nav
+    &__socials-nav {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: -1px;
+        transition: $transition + 0.2s;
+
+        @media (min-width: 993px) {
+            opacity: 0;
+            transform: scaleY(0);
+            &:hover,
+            &:focus {
+                opacity: 1;
+                transform: scaleY(1);
+            }
+        }
+    }
+
+    // .workers__socials-nav-list
+    &__socials-nav-list {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(55, 125, 255, 0.9);
+        padding: 15px 0;
+    }
+
+    // .workers__socials-nav-item
+    &__socials-nav-item {
+        &:not(:first-child) {
+            margin-left: 15px;
+        }
+    }
+
+    // .workers__socials-nav-link
+    &__socials-nav-link {
+        @media (min-width: 993px) {
+            &:hover,
+            &:focus {
+                color: $secondary-color;
+            }
+        }
+    }
+
+    // .workers__name
+    &__name {
+        display: block;
+        font-family: "Montserrat", sans-serif;
+        font-size: 26px;
+        line-height: 150%;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: #141d28;
+        margin-top: 34px;
+
+        @media (max-width: 630px) {
+            margin-top: 20px;
+        }
+    }
+
+    // .workers__position
+    &__position {
+        display: block;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        line-height: 150%;
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #5c6f87;
+        margin-top: 10px;
+
+        @media (max-width: 630px) {
+            margin-top: 0;
+        }
+    }
+}
