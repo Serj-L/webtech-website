@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <title>WebTech</title>
@@ -385,7 +385,87 @@
     </div>
 </section>
 <!-- /reasons -->
-
+<!-- gallery -->
+<section class="gallery">
+    <div class="gallery__fotos">
+        <a href="#" class="gallery__link">
+            <img src="img/gallery1.png" alt="gallery foto">
+        </a>
+        <a href="#" class="gallery__link">
+            <img src="img/gallery2.png" alt="gallery foto">
+        </a>
+        <a href="#" class="gallery__link">
+            <img src="img/gallery3.png" alt="gallery foto">
+        </a>
+        <a href="#" class="gallery__link">
+            <img src="img/gallery4.png" alt="gallery foto">
+        </a>
+    </div>
+</section>
+<!-- /gallery -->
+<!-- testimonials & realize dream -->
+<section class="testimonials">
+    <div class="testimonials__title-wrapper">
+        <h2 class="testimonials__title"><span class="color-text">Our </span>Testimonials</h2>
+    </div>
+    <div class="testimonials__customers-wrapper">
+        <div class="testimonials__customers swiper-container">
+            <div class="testimonials__customers-wrapper swiper-wrapper">
+                <div class="testimonials__customers-slide swiper-slide" data-customer-id="1">
+                    <div class="testimonials__customers-img-wrapper">
+                        <img class="testimonials__customers-img testimonials__customers-img--active" src="img/testimonials1.jpg" alt="customer foto">
+                    </div>
+                </div>
+                <div class="testimonials__customers-slide swiper-slide" data-customer-id="2">
+                    <div class="testimonials__customers-img-wrapper">
+                        <img class="testimonials__customers-img" src="img/testimonials2.jpg" alt="customer foto">
+                    </div>
+                </div>
+                <div class="testimonials__customers-slide swiper-slide" data-customer-id="3">
+                    <div class="testimonials__customers-img-wrapper">
+                        <img class="testimonials__customers-img" src="img/testimonials3.jpg" alt="customer foto">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonials__customers-buttons-wrapper">
+            <div class="testimonials__customers-slider-btn swiper-button-prev" id="testimonialsSliderBtnPrev">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path class="slider-btn-icon" fill="#377dff" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path>
+                </svg>
+            </div>
+            <div class="testimonials__customers-slider-btn swiper-button-next" id="testimonialsSliderBtnNext">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path class="slider-btn-icon" fill="#377dff" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="testimonials__review-wrapper">
+        <div class="testimonials__review-slide-wrapper testimonials__review-slide-wrapper--active" data-review-id="1">
+            <p class="testimonials__review-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laboriosam provident eaque pariatur, similique voluptas fugit dolorum corrupti. Eos, velit.
+            </p>
+            <span class="testimonials__review-customer-name">Michael L. Jackson</span>
+            <span class="testimonials__review-customer-position">designer</span>
+        </div>
+        <div class="testimonials__review-slide-wrapper" data-review-id="2">
+            <p class="testimonials__review-text">
+                Donec eget elit vel urna varius pharetra. Suspendisse sodales venenatis lorem nec tincidunt. Donec dignissim purus ut nulla ultricies.
+            </p>
+            <span class="testimonials__review-customer-name">Ronald C. Hartung</span>
+            <span class="testimonials__review-customer-position">marketer</span>
+        </div>
+        <div class="testimonials__review-slide-wrapper" data-review-id="3">
+            <p class="testimonials__review-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi consequuntur reprehenderit vero, aut molestias praesentium!
+            </p>
+            <span class="testimonials__review-customer-name">Bob N. Buthead</span>
+            <span class="testimonials__review-customer-position">developer</span>
+        </div>
+    </div>
+</section>
+<!-- /testimonials -->
 <script src="js/script.min.js"></script>
 </body>
 </html>
