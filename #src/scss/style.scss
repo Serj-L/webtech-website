@@ -24,6 +24,7 @@ $transition: 0.2s;
 @import "gallery";
 @import "swiper-bundle.min";
 @import "testimonials";
+@import "innovation";
 
 *,
 *::before,
@@ -94,6 +95,11 @@ h2 {
   padding-left: 38px;
   border-left: 3px solid $primary-color;
 
+  &.decoration-none {
+    border-left: none;
+    padding-left: 0;
+  }
+
   @media (max-width: 576px) {
     padding-left: 25px;
   }
@@ -113,6 +119,21 @@ h3 {
   margin: 0;
 }
 
+.big-title {
+  font-size: calc(43px + 37 * ((100vw - 320px) / (1440 - 320)));
+
+  @media (min-width: 1441px) {
+    font-size: 80px;
+  }
+}
+
+.medium-title {
+  font-size: calc(35px + 20 * ((100vw - 320px) / (1440 - 320)));
+
+  @media (min-width: 1441px) {
+    font-size: 55px;
+  }
+}
 .color-text {
   color: $primary-color;
 }
@@ -126,6 +147,43 @@ h3 {
   color: #ffffff;
   padding: 5px;
   transition: $transition;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 17px 0;
+  border: 2px solid $primary-color;
+  transition: $transition;
+  position: relative;
+  z-index: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    left: -1px;
+    top: -1px;
+    background-color: $primary-color;
+    transform: scale(0);
+    z-index: -1;
+    transition: $transition ease-in;
+  }
+
+  @media (min-width: 993px) {
+    &:hover,
+    &:focus {
+      color: #ffffff;
+      &::after {
+        transform: scale(1);
+      }
+    }
+  }
 }
 
 .scroll-up-btn {
