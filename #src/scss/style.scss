@@ -25,6 +25,7 @@ $transition: 0.2s;
 @import "swiper-bundle.min";
 @import "testimonials";
 @import "innovation";
+@import "news";
 
 *,
 *::before,
@@ -34,6 +35,10 @@ $transition: 0.2s;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+}
+
+a {
+  outline: none;
 }
 
 body {

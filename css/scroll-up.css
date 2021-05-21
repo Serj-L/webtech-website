@@ -1,0 +1,53 @@
+.scroll-up-btn {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .scroll-up-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(232, 193, 0, 0.8);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    -webkit-transition: background-color 0.2s, opacity 0.5s, visibility 0.5s;
+    -o-transition: background-color 0.2s, opacity 0.5s, visibility 0.5s;
+    transition: background-color 0.2s, opacity 0.5s, visibility 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    cursor: pointer;
+  }
+  .scroll-up-btn::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    color: #ffffff;
+  }
+}
+
+@media (min-width: 769px) and (min-width: 993px) {
+  .scroll-up-btn:hover, .scroll-up-btn:focus, .scroll-up-btn:active {
+    background-color: #e8c100;
+  }
+}
+
+@media (min-width: 769px) {
+  .scroll-up-btn.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
