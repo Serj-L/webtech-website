@@ -80,7 +80,7 @@
                             <li class="header__nav-item"><a class="header__nav-link" href="#">Services</a></li>
                             <li class="header__nav-item"><a class="header__nav-link" href="#">Portfolio</a></li>
                             <li class="header__nav-item"><a class="header__nav-link" href="#">Blog</a></li>
-                            <li class="header__nav-item"><a class="header__nav-link" href="#">Contact Us</a></li>
+                            <li class="header__nav-item" id="contactUsBtn"><a class="header__nav-link" href="#">Contact Us</a></li>
                         </ul>
                     </nav>
                     <div class="header__burger-btn">
@@ -624,6 +624,44 @@
     </div>
 </section>
 <!-- /footer -->
+<!--contact us modal-->
+<div class="modal-contact-us modal-screen" id="modal-contact-us">
+    <div class="modal-contact-us__wrapper modal-wrapper">
+      <div class="modal-contact-us__body">
+        <div class="modal-contact-us__header modal-header">
+          <div class="modal-contact-us__title">Contact Us</div>
+          <button type="button" class="btn-close"><span>&times;</span></button>
+        </div>
+        <form class="modal-contact-us__form modal-form" id="contact-us-form" action="#" name="contact-us-form" method="POST">
+            <span class="modal-contact-us__description modal-description">Please fill in this form to send us your message</span>
+            <div class="modal-contact-us__first-name">
+                <label class="input-label" for="modal-contact-us-first-name-input">First name <span class="color-text">*</span></label>
+                <input placeholder="First name" class="modal-contact-us__first-name-input modal-input" id="modal-contact-us-first-name-input" form="contact-us-form" name="userFirstName" required>
+            </div>
+            <div class="modal-contact-us__email">
+                <label class="input-label" for="modal-contact-us-email-input">E-mail <span class="color-text">*</span></label>
+                <input placeholder="E-mail" class="modal-contact-us__email-input modal-input" type="email" id="modal-contact-us-email-input" form="contact-us-form" name="userEmail" required>
+            </div>
+            <div class="modal-contact-us__phone">
+                <label class="input-label" for="modal-contact-us-email-input">Phone</label>
+                <input placeholder="Phone" class="modal-contact-us__email-input modal-input" type="tel" id="modal-contact-us-phone-input" form="contact-us-form" name="userPhone">
+            </div>
+            <div class="modal-contact-us__textarea">
+                <label class="textarea-label" for="modal-contact-us-textarea">Message <span class="color-text">*</span></label>
+                <textarea class="modal-contact-us__textarea modal-textarea" id="modal-contact-us-textarea" form="contact-us-form" name="userMessage" required></textarea>
+            </div>
+            <span class="modal-contact-us__requiry modal-requiry"><span class="color-text">*</span> required fields</span>
+        </form>
+        <div class="modal-contact-us__footer modal-footer">
+            <div class="modal-contact-us__footer-buttons modal-btn-wrapper">
+                <button type="reset" class="modal-button-reset modal-btn button" form="contact-us-form">Reset</button>
+                <button type="submit" class="modal-button-contact modal-btn button" form="contact-us-form">Send Message</button>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!--/contact us modal-->
 <script src="js/script.min.js"></script>
 </body>
 </html>

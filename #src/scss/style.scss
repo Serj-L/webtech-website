@@ -27,6 +27,7 @@ $transition: 0.2s;
 @import "innovation";
 @import "news";
 @import "footer";
+@import "modals";
 
 *,
 *::before,
@@ -176,6 +177,7 @@ address {
   transition: $transition;
   position: relative;
   z-index: 0;
+  cursor: pointer;
 
   &::after {
     content: "";

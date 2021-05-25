@@ -4,6 +4,7 @@
 @@include("scroll-up.js");
 @@include("smooth-scroll-to-block.js");
 @@include("burger.js");
+@@include('modal.js')
 @@include('swiper-bundle.min.js')
 
 //check broswer webP support
