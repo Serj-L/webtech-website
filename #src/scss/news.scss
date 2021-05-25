@@ -116,7 +116,6 @@
             height: 2px;
             background-color: $primary-color;
             transform: scaleX(0);
-            transform-origin: left;
             transition: $transition ease-in;
         }
 
@@ -127,7 +126,6 @@
 
                 &::after {
                     transform: scaleX(1);
-                    transform-origin: right;
                 }
             }
         }

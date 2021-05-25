@@ -1,0 +1,174 @@
+.footer {
+    background-color: #141d28;
+
+    // .footer__content-wrapper
+    &__content-wrapper {
+        display: flex;
+        color: #ffffff;
+        line-height: 180%;
+        padding: 100px 0 110px;
+
+        @media (max-width: 1180px) {
+            padding: 80px 0;
+        }
+        @media (max-width: 992px) {
+            flex-direction: column;
+        }
+        @media (max-width: 768px) {
+            padding: 60px 0;
+        }
+        @media (max-width: 576px) {
+            padding: 50px 0;
+        }
+    }
+
+    // .footer__title
+    &__title {
+        color: $primary-color;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin-bottom: 50px;
+
+        @media (max-width: 992px) {
+            margin-bottom: 25px;
+        }
+    }
+
+    // .footer__about-us
+    &__about-us {
+        flex-basis: 30%;
+
+        @media (max-width: 992px) {
+            margin: 0 0 40px 25px;
+        }
+    }
+
+    // .footer__socials-nav-list
+    &__socials-nav-list {
+        display: flex;
+    }
+
+    // .footer__socials-nav-item
+    &__socials-nav-item {
+        padding: 5px;
+        margin-top: 35px;
+        &:not(:first-child) {
+            margin-left: 5px;
+        }
+        @media (max-width: 992px) {
+            margin-top: 20px;
+        }
+    }
+
+    // .footer__socials-nav-link
+    &__socials-nav-link {
+        transition: $transition;
+
+        @media (min-width: 993px) {
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+        }
+    }
+
+    // .footer__recent-post
+    &__recent-post {
+        flex-basis: 30%;
+        margin-left: 50px;
+
+        @media (max-width: 992px) {
+            margin: 0 0 40px 25px;
+        }
+    }
+
+    // .footer__recent-post-item
+    &__recent-post-item {
+        list-style-image: url("../img/shevron-icon.svg");
+        &:first-child {
+            padding: 0 0 15px;
+        }
+        &:not(:first-child) {
+            padding: 15px 0;
+        }
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        &:last-child {
+            padding: 15px 0 0;
+        }
+    }
+
+    // .footer__recent-post-link
+    &__recent-post-link {
+        color: #ffffff;
+        transition: $transition;
+
+        @media (min-width: 993px) {
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+        }
+    }
+
+    // .footer____contact-us
+    &__contact-us {
+        flex-basis: 25%;
+        margin-left: 50px;
+
+        @media (max-width: 992px) {
+            margin-left: 25px;
+        }
+    }
+
+    // .footer__contact-us-item
+    &__contact-us-item {
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
+        &.address {
+            list-style-image: url("../img/address-icon.svg");
+        }
+        &.phone {
+            list-style-image: url("../img/phone-icon.svg");
+        }
+        &.mail {
+            list-style-image: url("../img/mail-icon.svg");
+        }
+    }
+
+    // .footer__contact-us-item-title
+    &__contact-us-item-title {
+        display: block;
+    }
+
+    // .footer__contact-us-item-link
+    &__contact-us-item-link {
+        color: #ffffff;
+        transition: $transition;
+
+        @media (min-width: 993px) {
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+        }
+    }
+
+    // .footer__copyright
+    &__copyright {
+        background-color: #233142;
+        padding: 17px 0 23px;
+        text-align: center;
+    }
+
+    // .footer__copyright-text
+    &__copyright-text {
+        font-size: 12px;
+        color: #ffffff;
+
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+}
